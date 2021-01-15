@@ -1,0 +1,9 @@
+/// 
+/// The ETH address in the unsigned integer form.
+///
+pub type Address = u160;
+
+/// 
+/// The biggest integer type available to store balances.
+///
+pub type Balance = u248;

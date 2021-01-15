@@ -1,0 +1,13 @@
+//!
+//! The 'CToken' contract entry.
+//!
+
+contract Ctoken {
+
+    pub fn new() -> Self {
+        Self 
+    }
+    pub fn get(self)->u64{
+       100 as u64
+    }
+}

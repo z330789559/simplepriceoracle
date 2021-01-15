@@ -1,0 +1,41 @@
+//!
+//! The 'SimplePriceOracle' contract entry.
+//!
+mod types;
+use self::types::Balance;
+use self::types::Address;
+use CToken::Ctoken;
+use std::collections::MTreeMap;
+
+struct Token{
+     address:Address,
+     balance:Balance,
+
+}
+
+contract SimplePriceOracle {
+    pub ctokens :MTreeMap<Address, Balance>;
+    pub fn new() -> Self {
+        Self {
+           ctokens: MTreeMap
+        }
+    }
+    pub fn getValue(self)->u64{
+        100 as u64
+    }
+    pub fn getAddress(self,adress:Address)->(Balance,bool){
+       self.ctokens.get(adress)
+    }
+    pub fn  update(mut self,_token:Token){
+       self.ctokens.insert(_token.address,_token.balance);
+    }
+}
+
+
+// #[test]
+// fn test_get(){
+//     let token:Ctoken =Ctoken::new(24 as u64);
+//     dbg!("{}",token);
+//     let oracle =SimplePriceOracle::new(token);
+//     dbg!("{}",oracle.getValue());
+// }

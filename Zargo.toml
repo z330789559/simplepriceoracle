@@ -1,0 +1,7 @@
+[project]
+name = 'SimplePriceOracle'
+type = 'contract'
+version = '0.1.6'
+
+[dependencies]
+CToken="0.1.6"
