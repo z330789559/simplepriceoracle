@@ -4,7 +4,6 @@
 mod types;
 use self::types::Balance;
 use self::types::Address;
-use CToken::Ctoken;
 use std::collections::MTreeMap;
 
 struct Token{

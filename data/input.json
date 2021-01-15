@@ -1,34 +1,30 @@
 {
   "type": "contract",
   "storages": {
-    "0x0": [
+    "0x0000000000000000000000000000000000000000": [
       "0x0",
       [],
-      [
-        {
-          "key": "0xdf255110565fff30cb72dfd4b372ce2c4b1fd32a",
-          "value": "1000"
-        }
-      ]
+      []
     ]
   },
   "msg": {
-    "sender": "0x0000000000000000000000000000000000000000",
-    "recipient": "0x0000000000000000000000000000000000000000",
-    "token_address": "0x0000000000000000000000000000000000000000",
-    "amount": "0"
+    "sender": "0xDF255110565ffF30cB72dfd4b372Ce2C4b1fd32a",
+    "recipient": "0x4c1Af8a707541F860987E643437b918B26AB4376",
+    "token_address": "0x3b00ef435fa4fcff5c209a37d1f3dcff37c705ad",
+    "amount": "177400000000000"
   },
   "arguments": {
+    "getAddress": {
+      "adress": "0xDF255110565ffF30cB72dfd4b372Ce2C4b1fd32a"
+    },
+    "new": {
+    },
     "update": {
       "_token": {
         "address": "0xDF255110565ffF30cB72dfd4b372Ce2C4b1fd32a",
         "balance": "1000"
       }
     },
-    "getValue": {},
-    "new": {},
-    "getAddress": {
-      "adress": "0xDF255110565ffF30cB72dfd4b372Ce2C4b1fd32a"
-    }
+    "getValue": {}
   }
 }
