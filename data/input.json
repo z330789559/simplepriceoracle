@@ -4,27 +4,25 @@
     "0x0000000000000000000000000000000000000000": [
       "0x0",
       [],
-      []
+      "0"
     ]
   },
   "msg": {
-    "sender": "0xDF255110565ffF30cB72dfd4b372Ce2C4b1fd32a",
-    "recipient": "0x4c1Af8a707541F860987E643437b918B26AB4376",
-    "token_address": "0x3b00ef435fa4fcff5c209a37d1f3dcff37c705ad",
-    "amount": "177400000000000"
+    "sender": "0x0000000000000000000000000000000000000000",
+    "recipient": "0x0000000000000000000000000000000000000000",
+    "token_address": "0x0000000000000000000000000000000000000000",
+    "amount": "0"
   },
   "arguments": {
-    "getAddress": {
-      "adress": "0xDF255110565ffF30cB72dfd4b372Ce2C4b1fd32a"
-    },
     "new": {
+      "_x": "1000"
+    },
+    "getAddress": {
+      "ctoken": "0x0"
     },
     "update": {
-      "_token": {
-        "address": "0xDF255110565ffF30cB72dfd4b372Ce2C4b1fd32a",
-        "balance": "1000"
-      }
-    },
-    "getValue": {}
+      "amount": "0",
+      "ctoken": "0x0"
+    }
   }
 }

@@ -5,36 +5,31 @@ mod types;
 use self::types::Balance;
 use self::types::Address;
 use std::collections::MTreeMap;
-
-struct Token{
-     address:Address,
-     balance:Balance,
-
-}
+use CToken::Ctoken;
 
 contract SimplePriceOracle {
-    pub ctokens :MTreeMap<Address, Balance>;
-    pub fn new() -> Self {
+     pub x:u64;
+    pub fn new(_x:u64) -> Self {
         Self {
-           ctokens: MTreeMap
+            x:_x
         }
     }
-    pub fn getValue(self)->u64{
-        100 as u64
+    pub fn getAddress(self,ctoken: Address )->u248{
+          let instance = Ctoken::fetch(ctoken);
+        let balance= instance.get();
+        balance
     }
-    pub fn getAddress(self,adress:Address)->(Balance,bool){
-       self.ctokens.get(adress)
-    }
-    pub fn  update(mut self,_token:Token){
-       self.ctokens.insert(_token.address,_token.balance);
+    pub fn  update(mut self,amount:Balance,ctoken: Address ){
+              let mut instance = Ctoken::fetch(ctoken);
+              instance.update(amount);
     }
 }
 
 
-// #[test]
-// fn test_get(){
-//     let token:Ctoken =Ctoken::new(24 as u64);
-//     dbg!("{}",token);
-//     let oracle =SimplePriceOracle::new(token);
-//     dbg!("{}",oracle.getValue());
-// }
+#[test] 
+fn test_get(){
+    //  let mut token:Ctoken =Ctoken::new(24 as u248);
+    // // dbg!("{}",token);
+    // let oracle =SimplePriceOracle::new(10 as u64,token);
+    // dbg!("{}",oracle.getAddress());
+}
